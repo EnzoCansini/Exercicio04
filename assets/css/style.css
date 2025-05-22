@@ -6,85 +6,120 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: var(--gradFundo);
+    font-family: Arial;
+}
+:root{
+    --corVerde: rgb(76, 255, 60);
+    --gradFundo: linear-gradient( 115deg, #001669, #007296 1%, #007296 11%, #015673 15%, 
+    #000 23.57%, transparent 23.57%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #2d8427 23.57%, #205a06 41%, #000 45%,
+	transparent 45%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #e79a07 45%, #e79a07 50%, #e79a07 52%, 
+    #444 55%, transparent 45%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #288ab1 55%, #288ab1 68%,  #000 73%, 
+    transparent 73%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #de491e 73%, #de491e 100% );
+    --atras: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(49, 49, 49));
+    --corVermelha: rgb(247, 18, 18);
+    --corAzul: rgb(12, 48, 255);
+    --corBege:rgb(255, 251, 16);
+}
+.nome{
+    font-size: 13px;
+}
+.titulo1 {
+    font-size: 70px;
+    color: aliceblue;
+}
+.letra{
+    font-size: 30px;
+    margin: 10px;
+}
+.divatomico{
+    display: flex;
+    height: auto;
+    width: 7px;
+    justify-content: end;
+    align-self: flex-start;
+    align-items: center;
+    justify-self: flex-start;
+    font-size: 15px;
+}
+.atomico{
+    height: 0px;
+    width: 0px;
 }
 .fundo {
+    border-radius: 10px;
+    padding: 10px;
     display: flex;
-    width: 1450px;
-    height: 900px;
+    width: auto;
+    height: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fcfcfc;
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: var(--atras);
+    font-family: Arial;
 }
 .linha1, .linha2, .linha3, .linha4, .linha5, .linha6, .linha7, .linha8, .linha9{
     display: flex;
-    width: 1386px;
+    width: auto;
 }
 .linha8, .linha9{
-    justify-content: end;
+    align-self: flex-end;
 }
 .espacin{
     height: 30px;
 }
-.sub1{
-    width: 1386px;
-    display: flex;
+.invisivel{
+    width: 75px;
+    border: 1px solid #fcfcfc00;
+    height: 90px;
+    margin: 5px;
 }
-.sub2{
+.quadrado1, .quadrado2, .quadrado, .quadrado4 {
     display: flex;
+    font-weight: bold;
+    font-size: 11px;
+    border-radius: 5px;
+    margin: 5px;
+    line-height: 0px;
+    display: flex;
+    width: 75px;
+    height: 90px;
+    border: 1px solid #000; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.quadrado1:hover, .quadrado2:hover, .quadrado:hover, .quadrado4:hover {
+    transform: scale(1.2);
 }
 .quadrado1{
-    font-size: 11px;
-    line-height: 0px;
-    display: flex;
-    background-color: rgb(117, 221, 107);
-    width: 75px;
-    height: 90px;
-    border: 1px solid #000; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: Arial
+    background-color: rgba(164, 211, 160, 0);
+    color: var(--corVerde);
+    border: 1px solid var(--corVerde);
 }
 .quadrado2{
-    font-size: 11px;
-    line-height: 0px;
-    display: flex;
-    background-color: rgb(207, 53, 92);
-    width: 75px;
-    height: 90px;
-    border: 1px solid #000; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: Arial
+    background-color: rgba(247, 18, 18, 0);
+    color: var(--corVermelha);
+    border: 1px solid var(--corVermelha);
 }
 .quadrado{
-    font-size: 11px;
-    line-height: 0px;
-    display: flex;
-    background-color: rgb(228, 225, 79);
-    width: 75px;
-    height: 90px;
-    border: 1px solid #000; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: Arial
+    background-color: rgba(255, 251, 16, 0);
+    color: var(--corBege);
+    border: 1px solid var(--corBege);
 }
 .quadrado4{
-    font-size: 11px;
-    line-height: 0px;
-    display: flex;
-    background-color: rgb(82, 100, 202);
-    width: 75px;
-    height: 90px;
-    border: 1px solid #000; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: Arial
+    background-color: rgba(12, 48, 255, 0);
+    color: var(--corAzul);
+    border: 1px solid var(--corAzul);
 }
