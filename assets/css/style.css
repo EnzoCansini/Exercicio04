@@ -11,23 +11,31 @@ body {
 }
 :root{
     --corVerde: rgb(76, 255, 60);
-    --gradFundo: linear-gradient( 115deg, #001669, #007296 1%, #007296 11%, #015673 15%, 
+    --gradFundo: linear-gradient( 115deg, #690000, #c52828 1%, #c52828 11%, #c52828 15%, 
     #000 23.57%, transparent 23.57%, transparent 100% ),
 	
-    linear-gradient( 109deg, transparent, #2d8427 23.57%, #205a06 41%, #000 45%,
+    linear-gradient( 109deg, transparent, #df7a08 23.57%, #c4942c 41%, #000 45%,
 	transparent 45%, transparent 100% ),
 	
-    linear-gradient( 109deg, transparent, #e79a07 45%, #e79a07 50%, #e79a07 52%, 
+    linear-gradient( 109deg, transparent, #fceb00 45%, #fbff00 50%, #fbff00 52%, 
     #444 55%, transparent 45%, transparent 100% ),
 	
-    linear-gradient( 109deg, transparent, #288ab1 55%, #288ab1 68%,  #000 73%, 
+    linear-gradient( 109deg, transparent, #233fda 55%, #288ab1 68%,  #000 73%, 
     transparent 73%, transparent 100% ),
 	
-    linear-gradient( 109deg, transparent, #de491e 73%, #de491e 100% );
+    linear-gradient( 109deg, transparent, #3ede1e 73%, #68b33c 100% );
+    
     --atras: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(49, 49, 49));
-    --corVermelha: rgb(247, 18, 18);
-    --corAzul: rgb(12, 48, 255);
-    --corBege:rgb(255, 251, 16);
+    --MetaisAlcalinos: red;
+    --MetaisAlcalunosTerrosos: orange;
+    --MetaisDeTransição: yellow;
+    --MetaisRepresentativos: rgb(49, 70, 255);
+    --SemiMetais: cyan;
+    --NaoMetais: rgb(236, 117, 230);
+    --Halogenios: rgb(204, 0, 204);
+    --GasesNobres: rgb(0, 219, 0);
+    --Lantanídeos: rgb(95, 231, 140);
+    --Actindeos: rgb(248, 89, 222);
 }
 .nome{
     font-size: 13px;
@@ -82,7 +90,7 @@ body {
     height: 90px;
     margin: 5px;
 }
-.quadrado1, .quadrado2, .quadrado, .quadrado4 {
+.MetaisAlcalinos, .MetaisAlcalunosTerrosos, .MetaisDeTransicao, .MetaisRepresentativos, .SemiMetais, .NaoMetais, .Halogenios, .GasesNobres, .Lantanideos, .Actindeos{
     display: flex;
     font-weight: bold;
     font-size: 11px;
@@ -92,7 +100,7 @@ body {
     display: flex;
     width: 75px;
     height: 90px;
-    border: 1px solid #000; 
+    border: 1px solid transparent; 
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -100,26 +108,96 @@ body {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
-.quadrado1:hover, .quadrado2:hover, .quadrado:hover, .quadrado4:hover {
+.MetaisAlcalinos:hover, .MetaisAlcalunosTerrosos:hover, .MetaisDeTransicao:hover, .MetaisRepresentativos:hover, .SemiMetais:hover, .NaoMetais:hover, .Halogenios:hover, .GasesNobres:hover, .Lantanideos:hover, .Actindeos:hover{
     transform: scale(1.2);
 }
-.quadrado1{
-    background-color: rgba(164, 211, 160, 0);
-    color: var(--corVerde);
-    border: 1px solid var(--corVerde);
-}
+
+    .MetaisAlcalinos:hover{
+        background-image: linear-gradient(to bottom right, rgb(105, 0, 0), rgb(0, 0, 0) 70%);
+    }
+    .MetaisAlcalunosTerrosos:hover{
+        background-image: linear-gradient(to bottom right, rgb(85, 48, 0), rgb(0, 0, 0) 70%);
+    }
+    .MetaisDeTransicao:hover{
+        background-image: linear-gradient(to bottom right, rgb(90, 84, 0), rgb(0, 0, 0) 70%);
+    }
+    .MetaisRepresentativos:hover{
+        background-image: linear-gradient(to bottom right, rgb(0, 25, 105), rgb(0, 0, 0) 70%);
+    }
+    .SemiMetais:hover{
+        background-image: linear-gradient(to bottom right, rgb(0, 105, 96), rgb(0, 0, 0) 70%);
+    }
+    .NaoMetais:hover{
+        background-image: linear-gradient(to bottom right, rgb(102, 0, 105), rgb(0, 0, 0) 70%);
+    }
+    .Halogenios:hover{
+        background-image: linear-gradient(to bottom right, rgb(96, 0, 105), rgb(0, 0, 0) 70%);
+    }
+    .GasesNobres:hover{
+        background-image: linear-gradient(to bottom right, rgb(0, 105, 56), rgb(0, 0, 0) 70%);
+    }
+    .Lantanideos:hover{
+        background-image: linear-gradient(to bottom right, rgb(33, 92, 50), rgb(0, 0, 0) 70%);
+    }
+    .Actindeos:hover{
+        background-image: linear-gradient(to bottom right, rgb(105, 0, 91), rgb(0, 0, 0) 70%);
+    }
+
 .quadrado2{
     background-color: rgba(247, 18, 18, 0);
     color: var(--corVermelha);
+    /*border-image: linear-gradient(to right, red, orange, yellow) 1;*/
     border: 1px solid var(--corVermelha);
 }
-.quadrado{
-    background-color: rgba(255, 251, 16, 0);
-    color: var(--corBege);
-    border: 1px solid var(--corBege);
-}
-.quadrado4{
-    background-color: rgba(12, 48, 255, 0);
-    color: var(--corAzul);
-    border: 1px solid var(--corAzul);
-}
+
+
+    .MetaisAlcalinos{
+        background-color: transparent;
+        color: var(--MetaisAlcalinos);
+        border: 1px, solid var(--MetaisAlcalinos);
+    }
+    .MetaisAlcalunosTerrosos{
+        background-color: transparent;
+        color: var(--MetaisAlcalunosTerrosos);
+        border: 1px, solid var(--MetaisAlcalunosTerrosos);
+    }
+    .MetaisDeTransicao{
+        background-color: transparent;
+        color: var(--MetaisDeTransição);
+        border: 1px, solid var(--MetaisDeTransição);
+    }
+    .MetaisRepresentativos{
+        background-color: transparent;
+        color: var(--MetaisRepresentativos);
+        border: 1px, solid var(--MetaisRepresentativos);
+    }
+    .SemiMetais{
+        background-color: transparent;
+        color: var(--SemiMetais);
+        border: 1px, solid var(--SemiMetais);
+    }
+    .NaoMetais{
+        background-color: transparent;
+        color: var(--NaoMetais);
+        border: 1px, solid var(--NaoMetais);
+    }
+    .Halogenios{
+        background-color: transparent;
+        color: var(--Halogenios);
+        border: 1px, solid var(--Halogenios);
+    }
+    .GasesNobres{
+        background-color: transparent;
+        color: var(--GasesNobres);
+        border: 1px, solid var(--GasesNobres);
+    }
+    .Lantanideos{
+        background-color: transparent;
+        color: var(--Lantanídeos);
+        border: 1px, solid var(--Lantanídeos);
+    }
+    .Actindeos{
+        background-color: transparent;
+        color: var(--Actindeos);
+        border: 1px, solid var(--Actindeos);
+    }
