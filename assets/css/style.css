@@ -7,7 +7,6 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: var(--gradFundo);
-    font-family: Arial;
 }
 :root{
     --corVerde: rgb(76, 255, 60);
@@ -23,7 +22,7 @@ body {
     linear-gradient( 109deg, transparent, #233fda 55%, #288ab1 68%,  #000 73%, 
     transparent 73%, transparent 100% ),
 	
-    linear-gradient( 109deg, transparent, #3ede1e 73%, #68b33c 100% );
+    linear-gradient( 109deg, transparent, #3ede1e 73%, #000000 100% );
     
     --atras: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(49, 49, 49));
     --MetaisAlcalinos: red;
@@ -142,15 +141,12 @@ body {
     .Actindeos:hover{
         background-image: linear-gradient(to bottom right, rgb(105, 0, 91), rgb(0, 0, 0) 70%);
     }
-
 .quadrado2{
     background-color: rgba(247, 18, 18, 0);
     color: var(--corVermelha);
     /*border-image: linear-gradient(to right, red, orange, yellow) 1;*/
     border: 1px solid var(--corVermelha);
 }
-
-
     .MetaisAlcalinos{
         background-color: transparent;
         color: var(--MetaisAlcalinos);
